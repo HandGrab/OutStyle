@@ -17,7 +17,7 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="false"
         app:headerLayout="@layout/home_slide_left"
-        app:menu="@menu/activity_main_drawer" />
+        app:menu="@menu/home_main_drawer" />
 
 
 </android.support.v4.widget.DrawerLayout>

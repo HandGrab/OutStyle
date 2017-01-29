@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_resume"
+            android:icon="@mipmap/house"
+            android:title="@string/my_resume" />
+
+        <item
+            android:id="@+id/nav_blog"
+            android:icon="@mipmap/book"
+            android:title="@string/my_blog" />
+
+        <item
+            android:id="@+id/nav_news"
+            android:icon="@mipmap/news"
+            android:title="@string/news" />
+        <!--<item-->
+            <!--android:id="@+id/nav_movie"-->
+            <!--android:icon="@mipmap/movie"-->
+            <!--android:title="@string/player" />-->
+
+        <item
+            android:id="@+id/nav_connect"
+            android:icon="@mipmap/tel"
+            android:title="@string/connect_me" />
+
+    </group>
+
+
+
+</menu>

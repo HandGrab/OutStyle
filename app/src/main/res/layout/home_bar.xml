@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     app:layout_scrollFlags="scroll|exitUntilCollapsed"
-    tools:context="com.sandy.blog.resume.ui.HomeActivity">
+    tools:context="com.sandy.blog.resume.ui.activity.HomeActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"  />
 
     </android.support.design.widget.AppBarLayout>
 
