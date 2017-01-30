@@ -2,6 +2,7 @@ package com.sandy.blog.resume.base;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -23,18 +24,20 @@ public abstract class BaseFragment extends Fragment implements UIInterface {
     protected String TAG = getClass().getSimpleName();
 
     protected Context mContext;
+    protected Resources mResource;
     protected View mView;
     private Unbinder unbinder;
 
 
     public BaseFragment() {
-;
+        ;
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mContext = getActivity();
+        mResource = mContext.getResources();
         processBeforeInitView();
     }
 

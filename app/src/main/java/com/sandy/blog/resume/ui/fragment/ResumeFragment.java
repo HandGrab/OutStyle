@@ -7,6 +7,7 @@ import com.sandy.blog.resume.R;
 import com.sandy.blog.resume.base.BaseFragment;
 import com.sandy.blog.resume.data.DataHelper;
 import com.sandy.blog.resume.model.HomeModel;
+import com.sandy.blog.resume.ui.activity.PersonalSkillActivity;
 import com.sandy.blog.resume.ui.adapter.HomeAdapter;
 
 import java.util.List;
@@ -17,7 +18,7 @@ import butterknife.BindView;
  * Created by Sandy Luo on 2017/1/27.
  */
 
-public class HomeFragment extends BaseFragment {
+public class ResumeFragment extends BaseFragment implements HomeAdapter.OnItemClickListener {
 
     @BindView(R.id.home_content_rv)
     RecyclerView mHomeContentRv;
@@ -42,5 +43,23 @@ public class HomeFragment extends BaseFragment {
         mHomeContentRv.setAdapter(mHomeAdapter);
     }
 
+    @Override
+    protected void initListener() {
+        mHomeAdapter.setOnItemClickListener(this);
+    }
 
+    @Override
+    public void clickItem(int position) {
+        switch (position) {
+            case 0:
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                skipAnotherActivity(PersonalSkillActivity.class);
+                break;
+        }
+    }
 }

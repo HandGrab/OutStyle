@@ -14,7 +14,7 @@
     </style>
 
     <!--主要的Theme类型-->
-    <style name="ResumeAppTheme" parent="AppTheme.NoActionBar">
+    <style name="ResumeAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/app_main_theme_color</item>
         <item name="colorPrimaryDark">@color/app_main_theme_color</item>
         <item name="colorAccent">@color/app_main_theme_color_accent</item>

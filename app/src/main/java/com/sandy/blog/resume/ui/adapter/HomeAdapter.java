@@ -73,6 +73,27 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeHolder> {
 
         @OnClick(R.id.root_view)
         public void onClick() {
+            if (onItemClickListener != null) {
+                onItemClickListener.clickItem(getAdapterPosition());
+            }
         }
+    }
+
+
+    private OnItemClickListener onItemClickListener;
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
+
+    /**
+     * 条目点击的监听
+     */
+    public interface OnItemClickListener {
+
+        /**
+         * 条目点击事件
+         */
+        void clickItem(int position);
     }
 }
