@@ -24,4 +24,5 @@
     <dimen name="home_item_margin_left">50dp</dimen>
     <dimen name="home_item_icon_left_margin">18dp</dimen>
     <dimen name="blog_margin">16dp</dimen>
+    <dimen name="personal_user_icon_size">60dp</dimen>
 </resources>

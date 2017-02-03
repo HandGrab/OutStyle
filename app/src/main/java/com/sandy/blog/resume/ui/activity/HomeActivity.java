@@ -9,6 +9,8 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.sandy.blog.resume.R;
 import com.sandy.blog.resume.base.BaseActivity;
@@ -24,6 +26,7 @@ import butterknife.OnClick;
 
 public class HomeActivity extends BaseActivity implements IHomeView, NavigationView.OnNavigationItemSelectedListener {
 
+    ImageView mUserIcon;
     @BindView(R.id.home_bar)
     Toolbar mHomeBar;
     @BindView(R.id.home_fab)
@@ -42,6 +45,8 @@ public class HomeActivity extends BaseActivity implements IHomeView, NavigationV
     @Override
     public void initView() {
         setSupportActionBar(mHomeBar);
+        View view = mHomeNavigationView.getHeaderView(0);
+        mUserIcon = (ImageView) view.findViewById(R.id.user_icon);
     }
 
     @Override
@@ -59,11 +64,12 @@ public class HomeActivity extends BaseActivity implements IHomeView, NavigationV
     @Override
     protected void initListener() {
         mHomeNavigationView.setNavigationItemSelectedListener(this);
-    }
-
-    @OnClick(R.id.home_fab)
-    public void onClick() {
-
+        mUserIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                skipAnotherActivity(PersonalInfoActivity.class);
+            }
+        });
     }
 
 
@@ -78,5 +84,14 @@ public class HomeActivity extends BaseActivity implements IHomeView, NavigationV
     @Override
     public void showFragment(Fragment fragment) {
         getSupportFragmentManager().beginTransaction().replace(R.id.content_main, fragment).commit();
+    }
+
+
+    @OnClick({R.id.home_fab})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.home_fab:
+                break;
+        }
     }
 }

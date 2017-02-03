@@ -23,8 +23,14 @@
             </intent-filter>
         </activity>
 
+        <!--个人技能-->
         <activity
             android:name=".ui.activity.PersonalSkillActivity"
+            android:screenOrientation="portrait" />
+
+        <!--个人信息-->
+        <activity
+            android:name=".ui.activity.PersonalInfoActivity"
             android:screenOrientation="portrait" />
     </application>
 
